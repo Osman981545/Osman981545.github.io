@@ -1,124 +1,383 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Osman Dirir | Engineering Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Osman Dirir | Engineering Portfolio</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      color: #222;
-      line-height: 1.6;
-    }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-    header {
-      background: #14263d;
-      color: white;
-      text-align: center;
-      padding: 70px 20px;
-    }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #222;
+    line-height: 1.7;
+}
 
-    header h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
+header {
+    background: #14263d;
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+}
 
-    header h2 {
-      color: white;
-    }
+header h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
 
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-    }
+header h2 {
+    color: white;
+    font-size: 23px;
+    font-weight: normal;
+}
 
-    section {
-      margin: 40px 0;
-    }
+.language-switch {
+    text-align: center;
+    padding: 20px;
+    background: white;
+}
 
-    h2, h3 {
-      color: #14263d;
-    }
+.language-switch button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: 1px solid #14263d;
+    border-radius: 6px;
+    background: white;
+    color: #14263d;
+    cursor: pointer;
+    font-weight: bold;
+}
 
-    .project {
-      background: white;
-      padding: 25px;
-      margin-bottom: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px #00000012;
-    }
+.language-switch button.active {
+    background: #14263d;
+    color: white;
+}
 
-    footer {
-      background: #14263d;
-      color: white;
-      text-align: center;
-      padding: 25px;
-    }
-  </style>
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+section {
+    margin: 45px 0;
+}
+
+section h2 {
+    color: #14263d;
+    border-bottom: 2px solid #14263d;
+    padding-bottom: 10px;
+}
+
+.project {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #00000012;
+}
+
+.project h3 {
+    color: #14263d;
+}
+
+footer {
+    background: #14263d;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+footer a {
+    color: white;
+}
+
+[lang="en"].translation {
+    display: none;
+}
+</style>
 </head>
 
 <body>
 
-  <header>
+<div class="language-switch">
+    <button id="svButton" class="active"
+            onclick="changeLanguage('sv')">
+        🇸🇪 Svenska
+    </button>
+
+    <button id="enButton"
+            onclick="changeLanguage('en')">
+        🇬🇧 English
+    </button>
+</div>
+
+<header>
     <h1>Osman Dirir</h1>
-    <h2>Mechanical Engineering Portfolio</h2>
-    <p>CAD | FEM | Mechanical Design | Product Development</p>
-  </header>
 
-  <main>
-
-    <section>
-      <h2>About Me</h2>
-      <p>
-        Mechanical Engineer with a Master's degree in
-        Mechanical Engineering, specializing in
-        Sustainable Design and Innovation.
-        Experienced in CAD, FEM, mechanical design,
-        product development and engineering projects.
-      </p>
-    </section>
-
-    <section>
-      <h2>Engineering Projects</h2>
-
-      <div class="project">
-        <h3>RevoClean - Handheld Vacuum Cleaner</h3>
+    <div class="translation" lang="sv">
+        <h2>Civilingenjör i maskinteknik</h2>
+        <p>Hållbar design och innovation</p>
         <p>
-          Mechanical design, CAD modelling,
-          modular construction and 3D printing.
+            Konstruktion | Produktutveckling |
+            CAD & FEM | Tillverkning | Simulering
         </p>
-        <p><strong>Tools:</strong> CATIA, 3DEXPERIENCE, KeyShot</p>
-      </div>
+    </div>
 
-      <div class="project">
+    <div class="translation" lang="en">
+        <h2>M.Sc. Mechanical Engineer</h2>
+        <p>Sustainable Design & Innovation</p>
+        <p>
+            Mechanical Design | Product Development |
+            CAD & FEM | Manufacturing | Simulation
+        </p>
+    </div>
+</header>
+
+<main>
+
+<section>
+
+<div class="translation" lang="sv">
+    <h2>Om mig</h2>
+
+    <p>
+        Jag är civilingenjör i maskinteknik från
+        Högskolan i Halmstad med inriktning mot
+        hållbar design och innovation.
+    </p>
+
+    <p>
+        Genom akademiska projekt och industrisamarbeten
+        med bland annat NIBE AB, Stena Recycling
+        och Halmstad University Solar Team har jag
+        utvecklat erfarenhet inom mekanisk konstruktion,
+        produktutveckling, CAD-modellering, FEM,
+        simulering och tillverkning.
+    </p>
+
+    <p>
+        Jag har arbetat med flera delar av
+        produktutvecklingsprocessen, från
+        behovsanalys och konceptutveckling till
+        konstruktion, materialval, prototypframtagning
+        och teknisk validering.
+    </p>
+
+    <p>
+        Jag är nyfiken, ansvarstagande och
+        lösningsorienterad. Jag har lätt för att
+        snabbt lära mig nya saker och ta till mig
+        nya tekniska verktyg, kunskaper och arbetssätt.
+        Jag trivs med nya utmaningar, anpassar mig
+        lätt till olika arbetsuppgifter och arbetar
+        strukturerat både självständigt och i team.
+    </p>
+</div>
+
+<div class="translation" lang="en">
+    <h2>About Me</h2>
+
+    <p>
+        I hold a Master's degree in Mechanical
+        Engineering, specializing in Sustainable
+        Design and Innovation, from Halmstad University.
+    </p>
+
+    <p>
+        Through academic and industry-collaborative
+        projects involving NIBE AB, Stena Recycling
+        and Halmstad University Solar Team, I have
+        gained experience in mechanical design,
+        product development, CAD modelling,
+        finite element analysis, simulation
+        and manufacturing.
+    </p>
+
+    <p>
+        My engineering experience covers different
+        stages of product development, including
+        requirements analysis, concept development,
+        mechanical design, material selection,
+        prototyping and technical validation.
+    </p>
+
+    <p>
+        I am curious, responsible and solution-oriented.
+        I learn quickly and readily take on new
+        technical tools, knowledge and ways of working.
+        I enjoy new challenges, adapt easily to
+        different tasks and work in a structured
+        way both independently and as part of a team.
+    </p>
+</div>
+
+</section>
+
+<section>
+
+<div class="translation" lang="sv">
+    <h2>Mina ingenjörsprojekt</h2>
+</div>
+
+<div class="translation" lang="en">
+    <h2>Engineering Projects</h2>
+</div>
+
+<div class="project">
+
+    <h3>RevoClean – Handheld Vacuum Cleaner</h3>
+
+    <div class="translation" lang="sv">
+        <p>
+            Produktutvecklingsprojekt med fokus på
+            mekanisk konstruktion, CAD-modellering,
+            modulär design och prototypframtagning
+            genom 3D-printing.
+        </p>
+        <p>
+            <strong>Verktyg:</strong>
+            CATIA, 3DEXPERIENCE, KeyShot, 3D-printing
+        </p>
+    </div>
+
+    <div class="translation" lang="en">
+        <p>
+            Product development project focused on
+            mechanical design, CAD modelling,
+            modular construction and prototyping
+            through 3D printing.
+        </p>
+        <p>
+            <strong>Tools:</strong>
+            CATIA, 3DEXPERIENCE, KeyShot, 3D Printing
+        </p>
+    </div>
+
+</div>
+
+<div class="project">
+
+    <div class="translation" lang="sv">
+        <h3>Konstruktion och FEM-analys</h3>
+        <p>
+            Konstruktionsprojekt med fokus på
+            hållfasthetsanalys, materialval,
+            FEM-simulering och teknisk validering.
+        </p>
+    </div>
+
+    <div class="translation" lang="en">
         <h3>Structural Design and FEM Analysis</h3>
         <p>
-          Structural analysis, material selection
-          and finite element simulations.
+            Engineering project involving structural
+            analysis, material selection, finite
+            element simulations and validation.
         </p>
-        <p><strong>Skills:</strong> FEM, CAD, Structural Analysis</p>
-      </div>
+    </div>
 
-      <div class="project">
-        <h3>HUST Solar Team</h3>
+</div>
+
+<div class="project">
+
+    <h3>HUST Solar Team</h3>
+
+    <div class="translation" lang="sv">
         <p>
-          Mechanical design and structural development
-          of components for a solar vehicle.
+            Mekanisk konstruktion och utveckling
+            av strukturella komponenter till
+            ett solcellsdrivet fordon.
         </p>
-        <p><strong>Skills:</strong> CAD, FEM, Mechanical Design</p>
-      </div>
+        <p>
+            CAD-modellering, konstruktion och
+            hållfasthetsanalys.
+        </p>
+    </div>
 
-    </section>
+    <div class="translation" lang="en">
+        <p>
+            Mechanical design and development
+            of structural components for a
+            solar-powered vehicle.
+        </p>
+        <p>
+            CAD modelling, mechanical design
+            and structural analysis.
+        </p>
+    </div>
 
-  </main>
+</div>
 
-  <footer>
-    <p>Copyright 2026 Osman Dirir</p>
-  </footer>
+<div class="project">
+
+    <div class="translation" lang="sv">
+        <h3>Examensarbete – NIBE AB</h3>
+        <p>
+            Examensarbete inom hållbar design
+            och innovation med fokus på hur
+            design kan integreras strategiskt
+            i produktutvecklingsprocessen.
+        </p>
+    </div>
+
+    <div class="translation" lang="en">
+        <h3>Master's Thesis – NIBE AB</h3>
+        <p>
+            Master's thesis in sustainable design
+            and innovation, exploring how design
+            can be strategically integrated
+            into the product development process.
+        </p>
+    </div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+
+    <p>© 2026 Osman Dirir</p>
+
+    <p>
+        <a href="https://www.linkedin.com/in/osman-dirir-49a201198"
+           target="_blank"
+           rel="noopener noreferrer">
+            LinkedIn
+        </a>
+    </p>
+
+</footer>
+
+<script>
+function changeLanguage(language) {
+
+    document.documentElement.lang = language;
+
+    document.querySelectorAll(".translation").forEach(
+        function(element) {
+            element.style.display =
+                element.getAttribute("lang") === language
+                ? "block"
+                : "none";
+        }
+    );
+
+    document.getElementById("svButton")
+        .classList.toggle("active", language === "sv");
+
+    document.getElementById("enButton")
+        .classList.toggle("active", language === "en");
+}
+
+changeLanguage("sv");
+</script>
 
 </body>
 </html>
